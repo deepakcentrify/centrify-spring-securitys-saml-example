@@ -1,0 +1,25 @@
+<EntityDescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="centrifyIDP.spring.saml.test"
+	xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+	<IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<KeyDescriptor>
+			<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+				<X509Data>
+					<X509Certificate>MIIDfDCCAmSgAwIBAgIQNXgAAcmeALVZePJAFbcflzANBgkqhkiG9w0BAQUFADAkMSIwIAYDVQQDDBlDZW50cmlmeSBDdXN0b21lciBBQUswMjI0MB4XDTE1MDgzMTE2MTU1N1oXDTM5MDEwMTAwMDAwMFowRDFCMEAGA1UEAww5Q2VudHJpZnkgQ3VzdG9tZXIgQUFLMDIyNCBBcHBsaWNhdGlvbiBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh3ZkxkZ4+StTCvsj5tTQJYsRzKSN3uSCrHinu6X6M1IoSpO6t2S+3Vwdz77LoFGe20RThzNhTliw+d2jdQ6qgu0uKFpUd+9LZ8XeujfMnFqXej5p8jHQTX5Ph6h95jyVsEYiqgJq5W0CrB7Z/aADZWs03IeQOHXdv4Z1476TICrfPT0UNTtNKzpHMh8cTu0/oreQzokSC5uULqFyKReHj9pPxQm9ZB+b3sXtfLBRxcghlvoJrkP2WjdEnTHKM3qV/rJyemXVQ6LNb618N9QfSigyujaDZdw99R0Yftqhhp1B/sANJbjtbr8wwKmKacKptLSTi2sV/KW6D4nbtmMiKQIDAQABo4GJMIGGMBcGCisGAQQBgqZwAQMECQwHQUFLMDIyNDAfBgNVHSMEGDAWgBRVjmyJ6vTfDkfFGESKEK+yJUrQvDAdBgNVHQ4EFgQUon6Z39yjn30j//y2KlNhAPETuYEwDgYDVR0PAQH/BAQDAgWgMBsGCisGAQQBgqZwAQQEDQwLQXBwbGljYXRpb24wDQYJKoZIhvcNAQEFBQADggEBACHkXUV2vWxmzAKgn/3yWOOg8O8cniT4BRAiFS7rVtLbCYadd5hG5Cyx8pwP2eNg9ur5NMi6VkgnTTpbIM3X9Ufcv8mqghbzf5AYhHOD25/FGYgCYkaa8MOAuNEk4zVyUlp0OQxXklfJF2+sOtoiG8MoHHDuA9GFzb/AzE3LfK9IF7K61KcXiEtwJuyMlwe0cTLzvC2PGZZmPxGqahQqdDVzLvaPfKaKJcct3a+nhpnvFcroSKYhMzrAyVTaBCnLlmpNzsWiWSytPpqvRBbzDRGMhKLceBKlPLthL7hoCwE7NuDWemasMYjYCufrKBdeh/YlTHhYzddAFM1mWjcMdJY=
+					</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</KeyDescriptor>
+		<SingleLogoutService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://aak0224.my-dev.centrify.com/my?logout=true" />
+		<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+			Location="https://aak0224.my-dev.centrify.com/applogin/appKey/833781f1-76ec-4b0a-b54d-72ac69abbe55/customerId/AAK0224" />
+		<SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://aak0224.my-dev.centrify.com/applogin/appKey/833781f1-76ec-4b0a-b54d-72ac69abbe55/customerId/AAK0224" />
+		<Attribute Name="Email Address"
+			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns="urn:oasis:names:tc:SAML:2.0:assertion" />
+	</IDPSSODescriptor>
+</EntityDescriptor>
